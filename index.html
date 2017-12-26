@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Has my dog been poisoned?</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+    <script src="converter.js"></script>
+
+    <!-- Custom styles for this template -->
+    <style>
+      body {
+        padding-top: 54px;
+      }
+      @media (min-width: 992px) {
+        body {
+          padding-top: 56px;
+        }
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Has my dog eaten a toxic amount of chocolate?</a>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1 class="mt-5"><i class="em em-chocolate_bar"> </i> <i class="em em-dog"></i></h1>
+          <p class="lead">
+              <br>
+          Check if your dog has consumed a toxic amount of chocolate.</p>
+        </div>
+      </div>
+
+      <div class="row">
+
+          <div class="col-lg-12 text-center">
+          <h2> Enter the weight of your dog: </h2>
+          <br><br>
+          </div>
+      </div>
+
+      <div class="row">
+
+          <div class="col-lg-6 text-center">
+              <p>
+                <label>Pounds:</label>
+                  <input id="inputPounds" type="number" placeholder="Pounds"
+                    oninput="weightConverterp2kg(this.value)" onchange="weightConverterp2kg(this.value)">
+              </p>
+          </div>
+
+          <div class="col-lg-6 text-center">
+              <p>Kilograms: <input id="inputKilograms" type="number" placeholder="Kilograms" oninput="weightConverterkg2p(this.value)" onchange="weightConverterkg2p(this.value)"></p>
+          </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-12 text-center">
+        <br><br>
+        <h2>What kind of chocolate was consumed?</h2>
+        <br><br>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-12 text-center">
+
+    <select class="form-control" id="chocolate-type" name="chocolate-selector">
+        <option value="0">-- Chocolate Kind -- </option>
+        <option value="0.25">White Chocolate (0.25 mg/oz)</option>
+        <option value="58">Milk Chocolate (58 mg/oz)</option>
+        <option value="130">Dark Chocolate (130 mg/oz)</option>
+        <option value="393">Baker's Chocolate (393 mg/oz)</option>
+    </select>
+
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-12 text-center">
+        <br><br>
+        <h2> How much chocolate was eaten?: </h2>
+        <br><br>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-6 text-center">
+            <p>
+              <label>Ounces:</label>
+                <input id="inputOunces" type="number" placeholder="Ounces"
+                  oninput="weightConverteroz2g(this.value); calculateToxicity();" onchange="weightConverteroz2g(this.value); calculateToxicity();">
+            </p>
+        </div>
+
+        <div class="col-lg-6 text-center">
+            <p>Grams: <input id="inputGrams" type="number" placeholder="Grams" oninput="weightConverterg2oz(this.value); calculateToxicity();" onchange="weightConverterg2oz(this.value); calculateToxicity();"></p>
+        </div>
+  </div>
+
+  <div class="row">
+
+      <div class="col-lg-12 text-center">
+      <br><br>
+
+      <h3> The above calculates how much of the ingredient toxic to dogs is consumed. If your dog has consumed an amount of toxic ingredient close to <b>20mg per pound of dog </b>, you should call a vet. The amount (mg per pound of dog) your dog has eaten is below. </h3>
+
+      <br><br>
+
+      <h2> <b> SUMMARY: If the number below is greater than, or close to 20, you should call a vet immediately. If it is a lot less than 20, your dog has consumed a relatively safe amount. </b> </h2>
+
+      </div>
+  </div>
+
+  <div class="row">
+
+
+      <div class="col-lg-12 text-center">
+          <br><br><br><br>
+        <h1>
+              <span id="toxicity"> - </span>
+         </h1>
+         <h5> mg of toxic ingredient per pound of dog </h5>
+
+         <br><br><br><br>
+     </div>
+
+ </div>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
