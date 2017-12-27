@@ -20,7 +20,8 @@ function calculateToxicity() {
     var chocolateTox = x.options[x.selectedIndex].value;
     var ozChocolate = document.getElementById("inputOunces").value;
 
-    tox = ( (ozChocolate * chocolateTox)/ dogWeight);
+    var tox = ( (ozChocolate * chocolateTox)/ dogWeight);
+    tox = Math.round(tox * 100) / 100;
 
     document.getElementById("toxicity").innerHTML = tox;
 }
