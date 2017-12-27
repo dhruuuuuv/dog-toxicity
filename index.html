@@ -68,12 +68,12 @@
               <p>
                 <label>Pounds:</label>
                   <input id="inputPounds" type="number" placeholder="Pounds"
-                    oninput="weightConverterp2kg(this.value)" onchange="weightConverterp2kg(this.value)">
+                    oninput="weightConverterp2kg(this.value)" onchange="weightConverterp2kg(this.value); calculateToxicity();">
               </p>
           </div>
 
           <div class="col-lg-6 text-center">
-              <p>Kilograms: <input id="inputKilograms" type="number" placeholder="Kilograms" oninput="weightConverterkg2p(this.value)" onchange="weightConverterkg2p(this.value)"></p>
+              <p>Kilograms: <input id="inputKilograms" type="number" placeholder="Kilograms" oninput="weightConverterkg2p(this.value)" onchange="weightConverterkg2p(this.value); calculateToxicity();"></p>
           </div>
     </div>
 
@@ -90,7 +90,7 @@
 
         <div class="col-lg-12 text-center">
 
-    <select class="form-control" id="chocolate-type" name="chocolate-selector">
+    <select class="form-control" id="chocolate-type" name="chocolate-selector" onchange="calculateToxicity();">
         <option value="0">-- Chocolate Kind -- </option>
         <option value="0.25">White Chocolate (0.25 mg/oz)</option>
         <option value="58">Milk Chocolate (58 mg/oz)</option>
